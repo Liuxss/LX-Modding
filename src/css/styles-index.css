@@ -130,3 +130,28 @@ header a:hover {
     50% { border-color: orangered; } /* tercer color */
     100% { border-color: white; } /* primer color de nuevo */
 }
+
+@media only screen and (max-width: 600px) {
+    
+    header {
+        display: block;
+    }
+
+    header .title-img {
+        padding: 25px 0px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    main {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+    }
+
+    main .items {
+        display: block;
+    }
+}
