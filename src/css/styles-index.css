@@ -1,0 +1,132 @@
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --primary-color: rgb(30, 30, 30);
+    --secondary-color: rgb(40, 40, 40);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+header {
+    background: var(--primary-color);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 20px;
+    font-size: 20px;
+    text-align: center;
+    transition: color 0.5s;
+}
+
+header .title-img img {
+    width: 100px;
+}
+
+.title-img {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    background: url("/src/img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main .items {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .items .item {
+    margin: 3%;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 15px;
+    animation: border-animation 2s infinite;
+}
+
+main .items .item h1 {
+    text-align: center;
+    font-size: 150%;
+}
+
+main .items .item img {
+    width: 25%;
+}
+
+main .items .item p {
+    text-align: left;
+    font-size: 85%;
+    word-break: break-all;
+}
+
+main .items {
+    text-align: center;
+}
+
+.buttons {
+    text-align: right;
+}
+
+.buttons button {
+    border: 15px solid orangered;
+    border-radius: 10px;
+    background: orangered;
+    color: white;
+}
+
+footer {
+    color: white;
+    background: var(--primary-color);
+    justify-content: space-between;
+    border-top: 5px solid var(--secondary-color);
+}
+
+footer .info {
+    text-align: center;
+}
+
+footer .info p {
+    padding: 10px 0px;
+}
+
+header a:hover {
+    animation: color-animation 2s infinite;
+}
+
+.buttons button {
+    cursor: pointer;
+}
+
+@keyframes color-animation {
+    0% { color: white; } /* primer color */
+    50% { color: orangered; } /* tercer color */
+    100% { color: white; } /* primer color de nuevo */
+}
+
+@keyframes border-animation {
+    0% { border-color: white; } /* primer color */
+    50% { border-color: orangered; } /* tercer color */
+    100% { border-color: white; } /* primer color de nuevo */
+}
