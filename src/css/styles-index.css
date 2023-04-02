@@ -45,7 +45,7 @@ header .title-img img {
 }
 
 main {
-    background: url("/src/img/background.jpg");
+    background: url(https://github.com/Liuxss/lxmodding.github.io/blob/main/src/img/background.jpg?raw=true);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
