@@ -9,6 +9,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box; /* Se agrega box-sizing para incluir el padding y border en el ancho y alto */
 }
 
 body {
@@ -34,7 +35,7 @@ header {
 header a {
     color: white;
     text-decoration: none;
-    padding: 20px 20px;
+    padding: 20px;
     font-size: 20px;
     text-align: center;
     transition: color 0.5s;
@@ -49,12 +50,40 @@ header .title-img img {
     align-items: center;
 }
 
-main .items {
+main .mc-versions {
     display: flex;
     justify-content: space-between;
 }
 
+.version-item {
+    margin: 2% 1%; /* Se ajusta el margen para pantallas pequeñas */
+    background: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 15px;
+    animation: border-animation 2s infinite;
+    text-align: center;
+}
+
+.version-item div {
+    display: flex;
+    justify-content: center;
+}
+
+.version-item img {
+    width: 30%;
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+}
+
+main .items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Se agrega flex-wrap para que los elementos se envuelvan en pantallas pequeñas */
+}
+
 main .items .item {
+    flex: 0 0 48%; /* Ajusta el ancho de los elementos para pantallas pequeñas */
     margin: 3%;
     background: var(--primary-color);
     color: white;
@@ -70,21 +99,18 @@ main .items .item h1 {
 }
 
 main .items .item img {
-    width: 25%;
+    width: 100%;
 }
 
 main .items .item p {
     text-align: left;
     font-size: 85%;
     word-break: break-all;
-}
-
-main .items {
-    text-align: center;
+    margin: 10px 0; /* Ajusta el margen */
 }
 
 .buttons {
-    text-align: right;
+    text-align: center;
 }
 
 .buttons button {
@@ -92,6 +118,7 @@ main .items {
     border-radius: 10px;
     background: orangered;
     color: white;
+    padding: 10px 20px; /* Ajusta el relleno */
 }
 
 footer {
@@ -106,7 +133,7 @@ footer .info {
 }
 
 footer .info p {
-    padding: 10px 0px;
+    padding: 10px 0;
 }
 
 header a:hover {
@@ -130,26 +157,46 @@ header a:hover {
 }
 
 @media only screen and (max-width: 600px) {
-    
     header {
         display: block;
+        text-align: center;
+    }
+
+    header a {
+        font-size: 24px; /* Se ajusta el tamaño del texto para pantallas pequeñas */
+        padding: 15px; /* Se ajusta el relleno */
     }
 
     header .title-img {
-        padding: 25px 0px;
-        align-items: center;
+        padding: 20px 0;
         text-align: center;
         justify-content: center;
     }
 
-    main {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center top;
+    header .title-img nav {
+        align-items: center;
     }
 
+    header .title-img nav a {
+        font-size: 14px; /* Se ajusta el tamaño del texto para pantallas pequeñas */
+    }
+
+    main .mc-versions,
     main .items {
         display: block;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0% 2%;
+    }
+
+    .version-item,
+    .items .item {
+        flex: 0 0 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        margin: 3%;
+    }
+
+    .version-item p,
+    .items .item p {
+        margin: 3% 0; /* Ajusta el margen */
     }
 }
