@@ -64,6 +64,7 @@ main {
     background-size: cover;
     background-position: center;
     user-select: none;
+    
 }
 
 .mc-versions {
@@ -78,6 +79,10 @@ main {
     border-radius: 10px;
     margin: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.version-item p {
+    text-align: left;
 }
 
 .version-item img {
