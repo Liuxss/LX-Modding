@@ -1,48 +1,30 @@
-/* Estilos generales */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-:root {
-    --primary-color: rgb(30, 30, 30);
-    --secondary-color: orangered;
-}
-
-* {
-    padding: 0;
+/* Reset de estilos */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
     margin: 0;
-    box-sizing: border-box; /* Se agrega box-sizing para incluir el padding y border en el ancho y alto */
+    padding: 0;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    background: url(https://raw.githubusercontent.com/Liuxss/lxmodding.github.io/main/src/img/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
 header {
-    background: var(--primary-color);
-    color: #fff;
+    background-color: #333333;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    border-bottom: 5px solid var(--secondary-color);
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-    padding: 20px;
-    font-size: 20px;
-    text-align: center;
-    transition: color 0.5s;
-}
-
-header .title-img img {
-    width: 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .title-img {
@@ -50,153 +32,100 @@ header .title-img img {
     align-items: center;
 }
 
-main .mc-versions {
+.title-img img {
+    width: 100px;
+    margin-right: 10px;
+    object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo su proporción */
+}
+
+.title-img h1 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+nav {
     display: flex;
-    justify-content: space-between;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.5em;
+}
+
+main {
+    padding: 20px;
+}
+
+.mc-versions {
+    display: flex;
+    justify-content: space-around;
 }
 
 .version-item {
-    margin: 2% 1%; /* Se ajusta el margen para pantallas pequeñas */
-    background: var(--primary-color);
-    color: white;
-    padding: 10px;
-    border: 2px solid var(--secondary-color);
-    border-radius: 15px;
-    animation: border-animation 2s infinite;
+    background-color: #333333;
+    padding: 20px;
     text-align: center;
-}
-
-.version-item div {
-    display: flex;
-    justify-content: center;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .version-item img {
-    width: 30%;
-    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
-}
-
-main .items {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Se agrega flex-wrap para que los elementos se envuelvan en pantallas pequeñas */
-}
-
-main .items .item {
-    flex: 0 0 48%; /* Ajusta el ancho de los elementos para pantallas pequeñas */
-    margin: 3%;
-    background: var(--primary-color);
-    color: white;
-    padding: 10px;
-    border: 2px solid var(--secondary-color);
-    border-radius: 15px;
-    animation: border-animation 2s infinite;
-}
-
-main .items .item h1 {
-    text-align: center;
-    font-size: 150%;
-}
-
-main .items .item img {
     width: 100%;
+    max-height: 180px;
+    object-fit: cover;
 }
 
-main .items .item p {
-    text-align: left;
-    font-size: 85%;
-    word-break: break-all;
-    margin: 10px 0; /* Ajusta el margen */
-}
-
-.buttons {
-    text-align: center;
+.version-item p {
+    margin-top: 15px;
+    color: #ffffff;
 }
 
 .buttons button {
-    border: 15px solid orangered;
-    border-radius: 10px;
-    background: orangered;
-    color: white;
-    padding: 10px 20px; /* Ajusta el relleno */
+    background-color: orangered;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 footer {
-    color: white;
-    background: var(--primary-color);
-    justify-content: space-between;
-    border-top: 5px solid var(--secondary-color);
-}
-
-footer .info {
+    background-color: #333333;
+    padding: 20px;
     text-align: center;
+    color: #ffffff;
+    margin-top: 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
-footer .info p {
-    padding: 10px 0;
+.info h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
-header a:hover {
-    animation: color-animation 2s infinite;
+.info p {
+    margin-top: 15px;
 }
 
-.buttons button {
-    cursor: pointer;
-}
-
-@keyframes color-animation {
-    0% { color: white; } /* primer color */
-    50% { color: orangered; } /* tercer color */
-    100% { color: white; } /* primer color de nuevo */
-}
-
-@keyframes border-animation {
-    0% { border-color: white; } /* primer color */
-    50% { border-color: orangered; } /* tercer color */
-    100% { border-color: white; } /* primer color de nuevo */
+.info p:last-child {
+    margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 600px) {
     header {
         display: block;
-        text-align: center;
-    }
-
-    header a {
-        font-size: 24px; /* Se ajusta el tamaño del texto para pantallas pequeñas */
-        padding: 15px; /* Se ajusta el relleno */
     }
 
     header .title-img {
-        padding: 20px 0;
-        text-align: center;
         justify-content: center;
     }
 
-    header .title-img nav {
-        align-items: center;
-    }
-
-    header .title-img nav a {
-        font-size: 14px; /* Se ajusta el tamaño del texto para pantallas pequeñas */
-    }
-
-    main .mc-versions,
-    main .items {
-        display: block;
-        flex-wrap: wrap;
+    header nav {
         justify-content: center;
-        margin: 0% 2%;
-    }
-
-    .version-item,
-    .items .item {
-        flex: 0 0 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-        margin: 3%;
-    }
-
-    .version-item p,
-    .items .item p {
-        margin: 3% 0; /* Ajusta el margen */
     }
 }
