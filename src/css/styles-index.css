@@ -25,6 +25,8 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid orangered;
+    user-select: none;
 }
 
 .title-img {
@@ -57,6 +59,11 @@ nav a {
 
 main {
     padding: 20px;
+    background-image: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    user-select: none;
 }
 
 .mc-versions {
@@ -80,7 +87,7 @@ main {
 }
 
 .version-item p {
-    margin-top: 15px;
+    margin: 15px;
     color: #ffffff;
 }
 
@@ -88,7 +95,7 @@ main {
     background-color: orangered;
     color: #ffffff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 10%;
     font-size: 1em;
     cursor: pointer;
     border-radius: 5px;
@@ -99,8 +106,8 @@ footer {
     padding: 20px;
     text-align: center;
     color: #ffffff;
-    margin-top: 20px;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid orangered;
 }
 
 .info h1 {
@@ -127,5 +134,15 @@ footer {
 
     header nav {
         justify-content: center;
+    }
+
+    main {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .mc-versions {
+        display: block;
+        justify-content: space-around;
     }
 }
