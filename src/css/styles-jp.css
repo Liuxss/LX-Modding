@@ -76,7 +76,7 @@ main {
 }
 
 .container .container-title img {
-    max-height: 100px;
+    max-height: 100%;
     object-fit: cover;
 }
 
@@ -165,5 +165,10 @@ footer {
 
     .mod img {
         width: 75%;
+    }
+
+    .container .container-title img {
+        max-height: 75px;
+        object-fit: cover;
     }
 }
